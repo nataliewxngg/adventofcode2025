@@ -1,0 +1,1 @@
+This repository is a collection of my solutions for Advent of Code 2025: https://adventofcode.com/, an Advent Calendar of programming puzzles created by Eric Wastl.
