@@ -7,7 +7,6 @@ here = os.path.dirname(__file__)
 
 with open(os.path.join(here, 'day2Input.txt')) as puzzleFile:
     puzzle = puzzleFile.read().split(',')
-print(puzzle)
 puzzleFile.close()
 
 # Find all invalid IDs
