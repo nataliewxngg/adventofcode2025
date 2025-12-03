@@ -2,7 +2,10 @@
 # Day 1: Secret Entrance
 
 # Import the puzzle
-with open('day1Input.txt') as puzzleFile:
+import os
+here = os.path.dirname(__file__)
+
+with open(os.path.join(here, 'day1Input.txt')) as puzzleFile:
     puzzle = puzzleFile.read().splitlines()
 puzzleFile.close()
 
