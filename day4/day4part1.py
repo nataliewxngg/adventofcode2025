@@ -1,5 +1,5 @@
 # Dec 4 2025
-# Day 4: Lobby
+# Day 4: Printing Department
 
 # Import the puzzle
 import os
