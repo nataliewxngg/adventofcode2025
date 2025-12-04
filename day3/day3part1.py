@@ -7,7 +7,6 @@ here = os.path.dirname(__file__)
 
 with open(os.path.join(here, 'day3Input.txt')) as puzzleFile:
     puzzle = puzzleFile.read().splitlines()
-print(puzzle)
 
 puzzleFile.close()
 
