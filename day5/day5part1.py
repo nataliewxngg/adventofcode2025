@@ -34,6 +34,3 @@ for freshRange in freshRanges:
             processedIngredients.append(ingredient)
 
 print(numOfFreshIngredients)
-
-#655
-#too low
