@@ -5,7 +5,6 @@
 import os
 here = os.path.dirname(__file__)
 
-readingRanges = True
 with open(os.path.join(here, 'day6Input.txt')) as puzzleFile:
     nums = []
     
