@@ -6,7 +6,7 @@ import os
 
 here = os.path.dirname(__file__)
 
-with open(os.path.join(here, 'day7TestInput.txt')) as puzzleFile:
+with open(os.path.join(here, 'day7Input.txt')) as puzzleFile:
     puzzle = []
     
     for line in puzzleFile:
@@ -14,9 +14,14 @@ with open(os.path.join(here, 'day7TestInput.txt')) as puzzleFile:
 
 puzzleFile.close()
 
-prevBeamIndex = puzzle[0].find('S')
+# Initialize a memoization cache
+memo = {}
 
 def findPathCount(prevBeamIndex, currentRow):
+    # Check if the result for this (prevBeamIndex, currentRow) has already been computed
+    if (prevBeamIndex, currentRow) in memo:
+        return memo[(prevBeamIndex, currentRow)]
+    
     splitCount = 0
 
     # Return 0 if the current grid item is out of bounds
@@ -34,9 +39,12 @@ def findPathCount(prevBeamIndex, currentRow):
         splitCount += findPathCount(prevBeamIndex-1, currentRow+1)
         splitCount += findPathCount(prevBeamIndex+1, currentRow+1)
 
+    # Store the result into the memo
+    memo[(prevBeamIndex, currentRow)] = splitCount
+
     return splitCount
 
-print(findPathCount(prevBeamIndex, 1))
+print(findPathCount(puzzle[0].find('S'), 1))
 
 '''
 # Slow solution
