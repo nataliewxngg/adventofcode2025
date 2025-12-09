@@ -1,8 +1,6 @@
 # Dec 9 2025
 # Day 9: Movie Theater
 
-import math
-
 # Import the puzzle
 import os
 
