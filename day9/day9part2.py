@@ -27,7 +27,7 @@ print(edges)
 
 # Determines the area given two points (of red tiles)
 def getArea(pt1, pt2):
-    return (pt1[0]-pt2[0]+1) * (pt1[1]-pt2[1]+1)
+    return (abs(pt1[0]-pt2[0])+1) * (abs(pt1[1]-pt2[1])+1)
 
 # Returns a and b such that a is always less than b
 def sort(a, b):
